@@ -1,0 +1,207 @@
+.admin-sidebar {
+  // @include transition2;
+  background-color: $admin-sidebar-bg;
+  // z-index: 1060;
+  // left: -210px;
+  // left: -100%;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  width: $admin-sidebar-width;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-right: 0 !important;
+  margin: 0 !important;
+  pointer-events: all;
+
+  .sidebar-header {
+    display: block;
+    height: $admin-header-height;
+    background-color: darken($color: $primary, $amount: 10%);
+    box-shadow: inset 0 -5px 0 darken($color: $primary-2, $amount: 10%);
+    color: #fff;
+    width: 100%;
+    padding: 0 1rem;
+    clear: both;
+    z-index: 10;
+    position: relative;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      color: rgb(255, 255, 255);
+      height: 100%;
+
+      font-size: 1.5rem;
+      &:hover {
+        text-decoration: none;
+      }
+
+      .logo-text {
+        flex: 1;
+        margin-left: 1rem;
+        color: #fdfdfd;
+        font-size: 0.65rem;
+        text-transform: uppercase;
+
+        .atas {
+          font-weight: bold;
+        }
+        .bawah {
+          color: #d3d2d2;
+          font-size: .55rem;
+        }
+      }
+    }
+  }
+
+  .sidebar-menu {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    color: #788195;
+    .bscroll-indicator {
+      background: rgba(255, 255, 255, 0.15) !important;
+    }
+
+    .menu-title {
+      padding: 1rem;
+      padding-bottom: 0.5rem;
+      letter-spacing: 1px;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      color: $primary-2;
+      font-weight: 600;
+    }
+    .menu-item {
+      a:hover {
+        text-decoration: none;
+      }
+      & > a {
+        transition: color .25s ease, background .25s ease;
+        color: #bcbace;
+        display: block;
+        padding: .5rem 1rem;
+        padding-right: 2.5rem;
+        font-size: 0.85rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &[aria-expanded=true] {
+          color: #fff !important;
+          background: rgba(0, 0, 0, 0.15);
+        }
+
+        &:hover {
+          color: #fff !important;
+          background: rgba(0, 0, 0, 0.05);
+        }
+
+        .mdi {
+          font-size: 1.25rem;
+          width: 30px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 0.5rem;
+          flex-shrink: 0;
+        }
+        .badge {
+          position: absolute;
+          right: 1rem;
+        }
+      }
+      &.active > a {
+        background: $admin-sidebar-menu-active-bg;
+        color: #ffffff;
+      }
+      &.has-submenu {
+        & > a {
+          &:after {
+            content: "\F0140";
+            font-family: "Material Design Icons";
+            font-size: 1rem;
+            border: none;
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transition: 0.3s ease-in-out;
+            transform: translateY(-50%);
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          &[aria-expanded=true]:after {
+            transform: rotate(90deg) translateX(-50%);
+          }
+        }
+      }
+      // Level 2
+      .submenu {
+        background: rgba(0, 0, 0, 0.25);
+        box-shadow: inset 3px 0px $admin-sidebar-menu-active-bg;
+        // list-style: none;
+        padding-left: 3rem;
+
+        & > .menu-item > a {
+          padding-left: 0.5rem;
+        }
+
+        //  Level 3
+        .submenu > .menu-item > a {
+          /* box-shadow: inset 3px 0px #aa64f1; */
+          padding-left: 1.5rem;
+
+          // &:before {
+          //   content: "";
+          //   background: $admin-sidebar-menu-active-bg;
+          //   width: 10%;
+          //   height: 3px;
+          //   position: absolute;
+          //   left: 0;
+          // }
+        }
+        //  Level 4
+        .submenu .submenu > .menu-item > a {
+          /* box-shadow: inset 3px 0px #aa64f1; */
+          padding-left: 3rem;
+          &:before {
+            width: 20%;
+          }
+        }
+        //  Level 5
+        .submenu .submenu .submenu > .menu-item > a {
+          /* box-shadow: inset 3px 0px #aa64f1; */
+          padding-left: 4.5rem;
+          &:before {
+            width: 30%;
+          }
+        }
+      }
+    }
+  }
+}
+
+#mainaside .admin-sidebar {
+  transform: translateX(-100%);
+}
+#mainaside.show .admin-sidebar {
+  transform: translateZ(0);
+}
+
+// Responsive
+@include media-breakpoint-up(md) {
+  #mainaside {
+    display: block !important;
+    opacity: 1;
+    width: auto;
+    z-index: 1000;
+    .admin-sidebar {
+      transform: translateZ(0);
+    }
+  }
+}

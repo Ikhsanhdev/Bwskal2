@@ -1,0 +1,64 @@
+.cv-card {
+  margin: 1rem;
+  border: 1px solid #e5eff5;
+  box-shadow: 0 2px 5px rgba(3, 27, 78, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  & + .cv-card {
+    margin-top: 1.5rem;
+  }
+
+  .header {
+    background: rgba($color: #000000, $alpha: 0.025);
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    font-size: 14pt;
+    color: #474849;
+    border-bottom: 1px solid #e5eff5;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+}
+
+.cv-pasfoto {
+  img {
+    width: 3cm;
+    height: 4cm;
+    object-fit: cover;
+  }
+}
+
+.cv-list-item {
+  line-height: 1;
+  font-size: 12pt;
+  display: flex;
+
+  & + & {
+    margin-top: 1rem;
+  }
+}
+
+.cv-profile-atas {
+  display: flex;
+  font-size: 10pt;
+  font-weight: 600;
+  align-items: center;
+  color: $secondary;
+
+
+  // div {
+  //   display: flex;
+  //   align-items: center;
+  // }
+
+  // div + div {
+  //   &::before {
+  //     content: "\F09DE";
+  //     display: inline-block;
+  //     font: normal normal normal 10pt/1 "Material Design Icons";
+  //     margin: 0 .25rem;
+  //   }
+  // }
+}

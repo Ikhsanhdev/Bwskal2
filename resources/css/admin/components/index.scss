@@ -1,0 +1,201 @@
+// Bootstrap
+@import 'bootstrap/index.scss';
+
+//  
+@import 'web-section';
+@import 'web-header';
+@import 'web-footer';
+@import 'admin-sidebar';
+@import 'admin-header';
+@import 'admin-content';
+@import 'admin-footer';
+@import 'media-picker';
+@import 'hasil-pemilihan';
+
+@import "akswitch";
+@import "owl";
+@import "pscroll";
+@import "kategori-app";
+@import "sortablelist";
+@import "cv";
+@import "cv-card";
+
+.bg-gradient-primary {
+  background: $gradient-primary !important;
+}
+
+.p-last-reset {
+  p:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.bs-scroll {
+  &:hover {
+    .bscroll-vertical-scrollbar {
+      transition: opacity .5s ease-out;
+      opacity: 1 !important;
+    }
+  }
+}
+.bscroll-vertical-scrollbar {
+  width: 10px !important;
+  right: 5px !important;
+}
+.bscroll-indicator {
+  border-radius: 4px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.decor-flip-v {
+  transform: rotateX(180deg);
+}
+.decor-flip-h {
+  transform: rotateY(180deg);
+}
+.decor-flip-vh {
+  transform: rotateX(180deg) rotateY(180deg);
+}
+.no-pe {
+  pointer-events: none;
+}
+
+.modal-pelamar-list {
+  max-height: 50vh;
+  overflow-y: auto;
+  padding: .5rem 1.5rem;
+
+  .pelamar-item {
+    display: flex;
+    align-items: center;
+
+    & + .pelamar-item {
+      margin-top: 1rem;
+    }
+    .avatar {
+      margin-right: 1rem;
+      overflow: hidden;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+}
+.link-over {
+  position: relative;
+  z-index: 2;
+}
+.link-block {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.avatar-40px {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.avatar-50px {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.avatar-60px {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.card-list .card + .card {
+  margin-top: 2rem;
+}
+
+.aktable-aksi {
+  .btn + .btn {
+    margin-left: .25rem;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .w-d-sm-100 {
+    width: 100%;
+  }
+}
+
+.ak-list-choice label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  box-sizing: content-box;
+  cursor: pointer;
+  position: relative;
+
+  & > * {
+    z-index: 1;
+  }
+  .bg {
+    @include transition;
+    position: absolute;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 2px solid #e8ebed;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  .teks {
+    @include transition;
+    font-size: 1rem !important;
+    margin-right: 1rem;
+  }
+  .indikator {
+    @include transition;
+    // width: 18px;
+    // height: 18px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    color: #fff;
+    padding: 0.25rem .5rem;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    .bg {
+      border: 2px solid $primary;
+    }
+    .indikator {
+      border-color: $primary;
+    }
+  }
+
+  input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    &:checked ~ .indikator {
+      border: 2px solid $primary;
+      background: $primary;
+    }
+    &:checked ~ .teks {
+      color: $primary;
+    }
+    &:checked ~ .bg {
+      border-color: $primary;
+      background: rgba($color: $primary, $alpha: 0.1);
+    }
+  }
+}

@@ -1,0 +1,16 @@
+$line-height-list: (
+    1,
+    1.1,
+    1.15,
+    1.25,
+    1.5,
+    1.75,
+    2,
+);
+
+@each $ukuran in $line-height-list {
+    $ukuran-class: str-replace(to-string($ukuran), ".", "-");
+    .lh-#{$ukuran-class} {
+        line-height: #{$ukuran};
+    }
+}

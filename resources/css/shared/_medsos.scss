@@ -1,0 +1,15 @@
+$medsos-colors: (
+  'web': $accent,
+  'facebook': #1873eb,
+  'twitter': #1c9cea,
+  'linkedin': #0a68c6,
+  'instagram': #db41a0,
+  'youtube': #fd0000,
+);
+
+@each $name, $color in $medsos-colors {
+  .medsos-link-colored.#{$name},
+  .medsos-link.#{$name}:hover {
+    color: $color;
+  }
+}

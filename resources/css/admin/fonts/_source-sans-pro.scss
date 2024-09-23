@@ -1,0 +1,36 @@
+/* source-sans-pro-italic - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Source Sans Pro Italic'),
+  local('SourceSansPro-Italic'),
+  url('#{$font-folder}source-sans-pro-v12-latin-italic.woff') format('woff'),
+  url('#{$font-folder}source-sans-pro-v12-latin-italic.ttf') format('truetype');
+}
+
+/* source-sans-pro-regular - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro Regular'),
+  local('SourceSansPro-Regular'),
+  url('#{$font-folder}source-sans-pro-v12-latin-regular.woff') format('woff'),
+  url('#{$font-folder}source-sans-pro-v12-latin-regular.ttf') format('truetype');
+}
+
+/* source-sans-pro-700 - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'),
+  local('SourceSansPro-Bold'),
+  url('#{$font-folder}source-sans-pro-v12-latin-700.woff') format('woff'),
+  url('#{$font-folder}source-sans-pro-v12-latin-700.ttf') format('truetype');
+}
+
+.ff-source-sans-pro {
+  font-family: 'Source Sans Pro';
+}

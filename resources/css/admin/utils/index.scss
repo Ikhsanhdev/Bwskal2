@@ -1,0 +1,49 @@
+@import "animation";
+@import "font-size";
+@import "line-height";
+
+.flex {
+  flex: 1;
+}
+
+.h-100v {
+  height: 100vh;
+}
+
+.w-100v {
+  width: 100vw;
+}
+
+.img-contain {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.img-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.is-btn:hover {
+  cursor: pointer;
+}
+
+.btn-list-horizontal {
+  .btn + .btn {
+    margin-left: .5rem;
+  }
+}
+.vis-hidden {
+  position: absolute;
+  visibility: hidden;
+}
+
+.no-outline {
+  outline: none;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}

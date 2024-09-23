@@ -1,0 +1,46 @@
+.main-navbar-wrap {
+  position: relative;
+  width: 100%;
+  z-index: 15;
+  .navbar {
+    padding: 1rem;
+  }
+  .navbar-nav {
+    li {
+      a {
+        @include transition;
+        // font-size: 1.15rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #ffffff;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+
+  .tulisan {
+    display: inline-block;
+    text-transform: uppercase;
+    margin-left: 1rem;
+    line-height: 1.2;
+    font-family: "Baloo 2";
+    color: #ffffff;
+
+    .atas {
+      font-size: 0.77rem;
+    }
+
+    .bawah {
+      font-weight: bold;
+      font-size: 1.75rem;
+    }
+  }
+}

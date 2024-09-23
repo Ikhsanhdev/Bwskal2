@@ -1,0 +1,118 @@
+.unduhan-filter {
+  display: flex;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  
+  * + * {
+    margin-top: 1rem;
+  }
+  
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    margin-bottom: 2rem;
+  
+    * + * {
+      margin-left: 1rem;
+      margin-top: 0;
+    }
+  }
+}
+
+.unduhan-list {
+  border: 1px solid #e5e5e5;
+
+  .item {
+    @include transition;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    line-height: 1;
+    color: $web-text-color;
+    gap: 1rem;
+
+    .icon {
+      font-size: 2.75rem;
+
+      &.flaticon-pdf {
+        color: #c06262;
+      }
+      &.flaticon-ppt {
+        color: #ea7a7f;
+      }
+      &.flaticon-xls {
+        color: #7dbc83;
+      }
+      &.flaticon-zip {
+        color: #000000;
+      }
+      &.flaticon-doc {
+        color: #539bbb;
+      }
+    }
+    .tulisan {
+      flex: 1;
+      .nama {
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        text-align: center;
+      }
+      .meta {
+        display: flex;
+        align-items: center;
+      }
+      .info {
+        font-size: 0.8rem;
+      }
+      .kategori {
+        display: block;
+        background: $accent;
+        color: $dark;
+        padding: 0.25rem 1rem;
+        font-size: 0.65rem;
+        margin-right: 0.5rem;
+        font-weight: 700;
+        flex-shrink: 0;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    &:hover {
+      background: rgba($color: $primary, $alpha: 0.05);
+    }
+
+    .btn-unduh {
+      width: 100%;
+      border-radius: 0;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.25rem .5rem;
+
+      @include media-breakpoint-up(md) {
+        width: 130px;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      gap: 0;
+
+      .icon {
+        margin-right: 1rem;
+      }
+
+      .tulisan {
+        .nama {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .item + .item {
+    border-top: 1px solid #e5e5e5;
+  }
+}

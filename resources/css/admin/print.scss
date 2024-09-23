@@ -1,0 +1,149 @@
+@import "functions";
+
+// FONT
+$font-folder: "../fonts/";
+@import "fonts/open-sans";
+@import "fonts/poppins";
+
+@import "variables";
+
+// UTILS
+@import "utils/font-size";
+@import "utils/font-size-pt";
+@import "utils/line-height";
+
+@import "mixin/transisi";
+
+//  Minjam dari bootstrap
+$grid-breakpoints: (
+    xs: 0,
+);
+
+$font-family-sans-serif: "Source Sans Pro", sans-serif;
+
+
+@import "components/cv";
+@import "components/cv-card";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/utilities/display";
+@import "~bootstrap/scss/utilities/flex";
+@import "~bootstrap/scss/utilities/align";
+@import "~bootstrap/scss/utilities/borders";
+@import "~bootstrap/scss/utilities/spacing";
+@import "~bootstrap/scss/utilities/sizing";
+@import "~bootstrap/scss/utilities/text";
+
+body {
+    background: #ffffff;
+    color: #000000;
+    font-size: 14pt;
+}
+
+.grayscale {
+    filter: grayscale(100);
+}
+
+.font-arial {
+    font-family: "Arial";
+}
+
+.font-calibri {
+    font-family: "Calibri";
+}
+
+.font-tradisional {
+    font-family: "Times New Roman";
+}
+
+.no-spacing {
+    border-spacing: 0;
+}
+
+.table-hitam {
+    border: 1px solid #000000;
+    margin-bottom: 0;
+    color: #000000 !important;
+    border-collapse: collapse;
+}
+
+.table-hitam th,
+.table-hitam td {
+    padding: 0;
+    border: 1px solid #000000;
+}
+.table-hitam:not(.no-padding) th,
+.table-hitam:not(.no-padding) td {
+    padding: 0.5rem;
+}
+
+.table-hitam thead th,
+.table-hitam thead td {
+    border-bottom-width: 2px;
+}
+
+.table-hitam thead.bb1 th,
+.table-hitam thead.bb1 td {
+    border-bottom-width: 1px;
+}
+
+th.tp-1 {
+    padding: 0.25rem !important;
+}
+
+.bt-l {
+    border-left: 1px solid #000000 !important;
+}
+.bt-t {
+    border-top: 1px solid #000000 !important;
+}
+.bt-r {
+    border-right: 1px solid #000000 !important;
+}
+.bt-b {
+    border-bottom: 1px solid #000000 !important;
+}
+
+.tr-child-b-b > th,
+.tr-child-b-b > td {
+    border-bottom: 1px solid #000000 !important;
+}
+
+.tr-child-top > td,
+.tr-child-top > th {
+    vertical-align: top !important;
+}
+
+.tr-child-middle > td,
+.tr-child-middle > th {
+    vertical-align: middle !important;
+}
+.tr-child-bottom > td,
+.tr-child-bottom > th {
+    vertical-align: bottom !important;
+}
+
+$ukurannya: (
+    0.15,
+    0.25
+);
+
+@each $ukuran in $ukurannya {
+    $c: str-replace(to-string($ukuran), ".", "-");
+    .p-#{$c}rem {
+        padding: #{$ukuran}rem !important;
+    }
+    .px-#{$c}rem {
+        padding-left: #{$ukuran}rem !important;
+        padding-right: #{$ukuran}rem !important;
+    }
+    .py-#{$c}rem {
+        padding-top: #{$ukuran}rem !important;
+        padding-bottom: #{$ukuran}rem !important;
+    }
+}

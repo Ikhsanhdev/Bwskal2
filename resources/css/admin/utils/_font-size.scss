@@ -1,0 +1,118 @@
+.fz-sm {
+  font-size: .5rem !important;
+}
+.fz-sm2 {
+  font-size: .65rem !important;
+}
+
+.fz-md {
+  font-size: 0.75rem !important;
+}
+
+.fz-md2 {
+  font-size: 0.8rem !important;
+}
+
+.fz-normal {
+  font-size: 1rem !important;
+}
+
+.fz-lg {
+  font-size: 1.25rem !important;
+}
+
+.fz-xl {
+  font-size: 1.5rem !important;
+}
+
+.fz-xxl {
+  font-size: 2rem !important;
+}
+
+$font-size-list: (
+  0.5,
+  0.55,
+  0.65,
+  0.75,
+  0.8,
+  0.85,
+  0.9,
+  1,
+  1.15,
+  1.25,
+  1.5,
+  1.75,
+  2,
+  2.15,
+  2.25,
+  2.5,
+  2.75,
+  3,
+  3.15,
+  3.25,
+  3.5,
+  3.75,
+  4,
+  4.15,
+  4.25,
+  4.5,
+  4.75,
+  5,
+  5.15,
+  5.25,
+  5.5,
+  5.75,
+  6,
+);
+
+$font-pt-list: (
+  8,
+  9,
+  10,
+  11,
+  12,
+  14,
+  16,
+  18,
+  20,
+  22,
+  24,
+  26,
+  28,
+  30,
+  32,
+  34,
+  36,
+  38,
+  40,
+  42,
+);
+
+@each $ukuran in $font-size-list {
+  $ukuran-class: str-replace(to-string($ukuran), '.', '-');
+  .fz-#{$ukuran-class}rem {
+    font-size: #{$ukuran}rem !important;
+  }
+}
+
+@each $ukuran in $font-pt-list {
+  $ukuran-class: str-replace(to-string($ukuran), '.', '-');
+  .fz-#{$ukuran-class}pt {
+    font-size: #{$ukuran}pt !important;
+  }
+}
+
+.font-weight-600,
+.fw-600 {
+  font-weight: 600 !important;
+}
+
+.font-weight-700,
+.fw-700 {
+  font-weight: 700 !important;
+}
+
+.font-weight-800,
+.fw-800 {
+  font-weight: 800 !important;
+}

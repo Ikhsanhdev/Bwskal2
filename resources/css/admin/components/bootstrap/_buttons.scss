@@ -1,0 +1,491 @@
+.btn {
+  font-size: .75rem;
+  padding: 0.35rem 1rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.btn-icon {
+    font-size: 1rem;
+    padding: 0.25rem 1rem;
+  }
+
+  &.btn-icon-badge {
+    font-size: 1rem;
+    padding: 0.25rem 1rem;
+    position: relative;
+    .tip {
+      position: absolute;
+      background: $primary;
+      color: white;
+      font-size: 0.65rem;
+      padding: 0.15rem 0.35rem;
+      border-radius: 0.25rem;
+      top: -0.5rem;
+      right: -.5rem;
+    }
+  }
+
+  &.btn-block {
+    justify-content: center;
+  }
+
+  &.btn-outline-2 {
+    border-width: 2px;
+  }
+  &.wide {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  &.wider {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  &.btn-w-600 {
+    font-weight: 600;
+  }
+  &.btn-w-700 {
+    font-weight: 700;
+  }
+}
+// .web {
+//   .btn {
+//     font-size: 1rem;
+//   }
+// }
+.btn-primary {
+  color: #ffffff !important;
+  background-color: $primary;
+  border-color: $primary;
+  box-shadow: none !important;
+
+  &:focus,
+  &:focus:active {
+    background-color: darken($color: $primary, $amount: 15%) !important;
+    border-color: darken($color: $primary, $amount: 15%) !important;
+  }
+  &:active,
+  &:hover {
+    background-color: darken($color: $primary, $amount: 10%) !important;
+    border-color: darken($color: $primary, $amount: 10%) !important;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: lighten($color: $primary, $amount: 5%) !important;
+    border-color: lighten($color: $primary, $amount: 5%) !important;
+  }
+}
+
+.btn-secondary {
+  color: #ffffff !important;
+  background-color: $warna-secondary;
+  border-color: $warna-secondary;
+  box-shadow: none !important;
+
+  &:focus,
+  &:focus:active {
+    background-color: darken($color: $warna-secondary, $amount: 15%) !important;
+    border-color: darken($color: $warna-secondary, $amount: 15%) !important;
+  }
+  &:active,
+  &:hover {
+    background-color: darken($color: $warna-secondary, $amount: 10%) !important;
+    border-color: darken($color: $warna-secondary, $amount: 10%) !important;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: lighten($color: $warna-secondary, $amount: 5%) !important;
+    border-color: lighten($color: $warna-secondary, $amount: 5%) !important;
+  }
+}
+
+.btn-info {
+  color: #ffffff !important;
+  background-color: $warna-info;
+  border-color: $warna-info;
+  box-shadow: none !important;
+
+  &:focus,
+  &:focus:active {
+    background-color: darken($color: $warna-info, $amount: 15%) !important;
+    border-color: darken($color: $warna-info, $amount: 15%) !important;
+  }
+  &:active,
+  &:hover {
+    background-color: darken($color: $warna-info, $amount: 10%) !important;
+    border-color: darken($color: $warna-info, $amount: 10%) !important;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: lighten($color: $warna-info, $amount: 5%) !important;
+    border-color: lighten($color: $warna-info, $amount: 5%) !important;
+  }
+}
+
+.btn-warning {
+  color: #fff1d9 !important;
+  background-color: $warna-warning;
+  border-color: $warna-warning;
+  box-shadow: none !important;
+
+  &:focus,
+  &:focus:active {
+    background-color: darken($color: $warna-warning, $amount: 15%) !important;
+    border-color: darken($color: $warna-warning, $amount: 15%) !important;
+  }
+  &:active,
+  &:hover {
+    background-color: darken($color: $warna-warning, $amount: 10%) !important;
+    border-color: darken($color: $warna-warning, $amount: 10%) !important;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: lighten($color: $warna-warning, $amount: 5%) !important;
+    border-color: lighten($color: $warna-warning, $amount: 5%) !important;
+  }
+}
+
+.btn-pinandu-biru {
+  color: #ffffff !important;
+  background-color: $primary;
+  border-color: $primary;
+  box-shadow: none !important;
+
+  &:focus,
+  &:focus:active {
+    background-color: darken($color: $primary, $amount: 15%) !important;
+    border-color: darken($color: $primary, $amount: 15%) !important;
+  }
+  &:active,
+  &:hover {
+    background-color: darken($color: $primary, $amount: 10%) !important;
+    border-color: darken($color: $primary, $amount: 10%) !important;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: lighten($color: $primary, $amount: 5%) !important;
+    border-color: lighten($color: $primary, $amount: 5%) !important;
+  }
+}
+
+.btn-pinandu-kuning {
+  color: #6b6b6b !important;
+  background-color: $warning;
+  border-color: $warning;
+  box-shadow: none !important;
+
+  &:focus,
+  &:focus:active {
+    background-color: darken($color: $warning, $amount: 15%) !important;
+    border-color: darken($color: $warning, $amount: 15%) !important;
+  }
+  &:active,
+  &:hover {
+    background-color: darken($color: $warning, $amount: 10%) !important;
+    border-color: darken($color: $warning, $amount: 10%) !important;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: lighten($color: $warning, $amount: 5%) !important;
+    border-color: lighten($color: $warning, $amount: 5%) !important;
+  }
+}
+
+.btn-danger {
+  color: #ffffff !important;
+  background-color: $warna-danger;
+  border-color: $warna-danger;
+  box-shadow: none !important;
+
+  &:focus,
+  &:focus:active {
+    background-color: darken($color: $warna-danger, $amount: 15%) !important;
+    border-color: darken($color: $warna-danger, $amount: 15%) !important;
+  }
+  &:active,
+  &:hover {
+    background-color: darken($color: $warna-danger, $amount: 10%) !important;
+    border-color: darken($color: $warna-danger, $amount: 10%) !important;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: lighten($color: $warna-danger, $amount: 5%) !important;
+    border-color: lighten($color: $warna-danger, $amount: 5%) !important;
+  }
+}
+
+.btn-success {
+  color: #ffffff;
+  background-color: $warna-success;
+  border-color: $warna-success;
+  box-shadow: none !important;
+
+  &:focus,
+  &:focus:active {
+    color: #ffffff !important;
+    background-color: darken($color: $warna-success, $amount: 15%) !important;
+    border-color: darken($color: $warna-success, $amount: 15%) !important;
+  }
+  &:active,
+  &:hover {
+    color: #ffffff !important;
+    background-color: darken($color: $warna-success, $amount: 10%) !important;
+    border-color: darken($color: $warna-success, $amount: 10%) !important;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: #ffffff !important;
+    background-color: lighten($color: $warna-success, $amount: 5%) !important;
+    border-color: lighten($color: $warna-success, $amount: 5%) !important;
+  }
+}
+
+// Outline
+.btn-outline-primary {
+  color: $primary;
+  border-color: $primary;
+  box-shadow: none !important;
+
+  &:hover {
+    color: #fff;
+    background-color: darken($color: $primary, $amount: 10%) !important;
+    border-color: darken($color: $primary, $amount: 10%) !important;
+  }
+
+  &:focus,
+  &.focus {
+    color: #fff;
+    background-color: darken($color: $primary, $amount: 15%) !important;
+    border-color: darken($color: $primary, $amount: 15%) !important;
+  }
+
+  &.disabled, 
+  &:disabled {
+    color: lighten($color: $primary, $amount: 5%) !important;
+    background-color: transparent;
+  }
+  // &:not(:disabled):not(.disabled):active, 
+  // &:not(:disabled):not(.disabled).active, 
+  // .show > &.dropdown-toggle {
+  //   color: #fff;
+  //   background-color: #3490dc;
+  //   border-color: #3490dc;
+  // }
+  // &:not(:disabled):not(.disabled):active:focus, 
+  // &:not(:disabled):not(.disabled).active:focus, 
+  // .show > &.dropdown-toggle:focus {
+  //   box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.5);
+  // }
+}
+
+.btn-outline-secondary {
+  color: $warna-secondary;
+  border-color: $warna-secondary;
+  box-shadow: none !important;
+
+  &:hover {
+    color: #fff;
+    background-color: darken($color: $warna-secondary, $amount: 10%) !important;
+    border-color: darken($color: $warna-secondary, $amount: 10%) !important;
+  }
+
+  &:focus,
+  &.focus {
+    color: #fff;
+    background-color: darken($color: $warna-secondary, $amount: 15%) !important;
+    border-color: darken($color: $warna-secondary, $amount: 15%) !important;
+  }
+
+  &.disabled, 
+  &:disabled {
+    color: lighten($color: $warna-secondary, $amount: 5%) !important;
+    background-color: transparent;
+  }
+}
+
+.btn-outline-info {
+  color: $warna-info;
+  border-color: $warna-info;
+  box-shadow: none !important;
+
+  &:hover {
+    color: #fff !important;
+    background-color: darken($color: $warna-info, $amount: 10%) !important;
+    border-color: darken($color: $warna-info, $amount: 10%) !important;
+  }
+
+  &:focus,
+  &.focus {
+    color: #fff !important;
+    background-color: darken($color: $warna-info, $amount: 15%) !important;
+    border-color: darken($color: $warna-info, $amount: 15%) !important;
+  }
+
+  &.disabled, 
+  &:disabled {
+    color: lighten($color: $warna-info, $amount: 5%) !important;
+    background-color: transparent;
+  }
+}
+
+.btn-outline-instagram {
+  color: $warna-instagram;
+  border-color: $warna-instagram;
+  box-shadow: none !important;
+
+  &:hover {
+    color: #fff !important;
+    background-color: darken($color: $warna-instagram, $amount: 10%) !important;
+    border-color: darken($color: $warna-instagram, $amount: 10%) !important;
+  }
+
+  &:focus,
+  &.focus {
+    color: #fff !important;
+    background-color: darken($color: $warna-instagram, $amount: 15%) !important;
+    border-color: darken($color: $warna-instagram, $amount: 15%) !important;
+  }
+
+  &.disabled, 
+  &:disabled {
+    color: lighten($color: $warna-instagram, $amount: 5%) !important;
+    background-color: transparent;
+  }
+}
+
+.btn-outline-warning {
+  color: $warna-warning;
+  border-color: $warna-warning;
+  box-shadow: none !important;
+
+  &:hover {
+    color: #fff1d9 !important;
+    background-color: darken($color: $warna-warning, $amount: 10%) !important;
+    border-color: darken($color: $warna-warning, $amount: 10%) !important;
+  }
+
+  &:focus,
+  &.focus {
+    color: #fff1d9 !important;
+    background-color: darken($color: $warna-warning, $amount: 15%) !important;
+    border-color: darken($color: $warna-warning, $amount: 15%) !important;
+  }
+
+  &.disabled, 
+  &:disabled {
+    color: lighten($color: $warna-warning, $amount: 5%) !important;
+    background-color: transparent;
+  }
+}
+
+.btn-outline-danger {
+  color: $warna-danger;
+  border-color: $warna-danger;
+  box-shadow: none !important;
+
+  &:hover {
+    color: #fff;
+    background-color: darken($color: $warna-danger, $amount: 10%) !important;
+    border-color: darken($color: $warna-danger, $amount: 10%) !important;
+  }
+
+  &:focus,
+  &.focus {
+    color: #fff;
+    background-color: darken($color: $warna-danger, $amount: 15%) !important;
+    border-color: darken($color: $warna-danger, $amount: 15%) !important;
+  }
+
+  &.disabled, 
+  &:disabled {
+    color: lighten($color: $warna-danger, $amount: 5%) !important;
+    background-color: transparent;
+  }
+}
+
+.btn-outline-success {
+  color: $warna-success;
+  border-color: $warna-success;
+  box-shadow: none !important;
+
+  &:hover {
+    color: #fff;
+    background-color: darken($color: $warna-success, $amount: 10%) !important;
+    border-color: darken($color: $warna-success, $amount: 10%) !important;
+  }
+
+  &:focus,
+  &.focus {
+    color: #fff;
+    background-color: darken($color: $warna-success, $amount: 15%) !important;
+    border-color: darken($color: $warna-success, $amount: 15%) !important;
+  }
+
+  &.disabled, 
+  &:disabled {
+    color: lighten($color: $warna-success, $amount: 5%) !important;
+    background-color: transparent;
+  }
+}
+
+
+.btn-putih {
+  color: #404040 !important;
+  background-color: #ffffff;
+  border-color: #DDDDDD;
+  box-shadow: none !important;
+
+  &:focus,
+  &:focus:active {
+    background-color: darken($color: #ffffff, $amount: 15%) !important;
+    border-color: darken($color: #DDDDDD, $amount: 15%) !important;
+  }
+  &:active,
+  &:hover {
+    background-color: darken($color: #ffffff, $amount: 10%) !important;
+    border-color: darken($color: #DDDDDD, $amount: 10%) !important;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: lighten($color: #ffffff, $amount: 5%) !important;
+    border-color: lighten($color: #DDDDDD, $amount: 5%) !important;
+  }
+}
+
+.btn-orange {
+  color: #ffffff !important;
+  background-color: $orange;
+  border-color: $orange;
+  box-shadow: none !important;
+
+  &:focus,
+  &:focus:active {
+    background-color: darken($color: $orange, $amount: 15%) !important;
+    border-color: darken($color: $orange, $amount: 15%) !important;
+  }
+  &:active,
+  &:hover {
+    background-color: darken($color: $orange, $amount: 10%) !important;
+    border-color: darken($color: $orange, $amount: 10%) !important;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: lighten($color: $orange, $amount: 5%) !important;
+    border-color: lighten($color: $orange, $amount: 5%) !important;
+  }
+}

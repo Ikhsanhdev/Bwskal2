@@ -1,0 +1,25 @@
+/* heebo-regular - latin */
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Heebo'),
+  local('Heebo-Regular'),
+  url('#{$font-folder}heebo-v4-latin-regular.woff') format('woff'),
+  url('#{$font-folder}heebo-v4-latin-regular.ttf') format('truetype');
+}
+
+/* heebo-700 - latin */
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Heebo Bold'),
+  local('Heebo-Bold'),
+  url('#{$font-folder}heebo-v4-latin-700.woff') format('woff'),
+  url('#{$font-folder}heebo-v4-latin-700.ttf') format('truetype');
+}
+
+.ff-heebo {
+  font-family: 'Heebo';
+}

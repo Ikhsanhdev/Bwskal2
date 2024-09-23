@@ -1,0 +1,43 @@
+.page-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .page-link {
+    @include transition;
+    transition-property: background-color, color, border-color;
+    border-color: transparent;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #858586;
+    margin: 0 0.25rem;
+    padding: 0.5rem 0.8rem;
+    line-height: 1;
+    font-size: 0.875rem;
+    font-weight: 700;
+    border-radius: 0 !important;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.15);
+    }
+
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+  &.active {
+    .page-link {
+      color: #fff;
+      background-color: #33417B;
+      border-color: #33417B;
+    }
+  }
+  &.disabled {
+    .page-link {
+      color: #c5c2c2;
+      pointer-events: none;
+      cursor: auto;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+}

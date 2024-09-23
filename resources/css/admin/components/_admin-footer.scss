@@ -1,0 +1,27 @@
+.admin-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin: 0 1rem;
+  color: #555a64;
+  font-size: 0.75rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  font-family: "Source Sans Pro";
+
+  strong {
+    color: #2c3038;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 1rem 0;
+    margin: 0 2rem;
+  }
+
+  &.text-light {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    
+    strong {
+      color: #ffffff;
+    }
+  }
+}

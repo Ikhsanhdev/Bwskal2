@@ -1,0 +1,1 @@
+<?php /**PATH /src/resources/views/layouts/web/favicon.blade.php ENDPATH**/ ?>

@@ -1,0 +1,101 @@
+.web-pegawai-wrap {
+}
+
+.pegawai-col {
+  margin-top: 2rem;
+}
+
+.pegawai-item {
+  background: $primary;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  cursor: pointer;
+
+  .foto {
+    width: 180px;
+    height: 200px;
+    background: #dddddd;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .name {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    font-family: $font-family;
+    margin-bottom: 0.5rem;
+  }
+
+  .position {
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.75rem;
+    font-family: $font-family;
+  }
+
+  .__overlay {
+    @include transition;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: $primary-alt, $alpha: 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+  }
+
+  &:hover {
+    .__overlay {
+      opacity: 1;
+    }
+  }
+}
+
+.pegawai-modal-body {
+  border-radius: 0.3rem;
+  overflow: hidden;
+  padding: 0;
+  .pegawai-header {
+    display: flex;
+    align-items: center;
+    background: $primary;
+    border-top: 5px solid $accent;
+    color: #ffffff;
+    padding: 1.5rem;
+    img {
+      width: 100px;
+      margin-left: 1.5rem;
+    }
+    .text-content {
+      flex: 1;
+    }
+    .name {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    .position {
+      font-size: 0.8rem;
+    }
+  }
+  .pegawai-content {
+    padding: 1.5rem;
+    font-size: 0.8rem;
+  }
+}

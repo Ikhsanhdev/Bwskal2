@@ -1,0 +1,58 @@
+.card {
+  // box-shadow: 0 5px 10px rgba(0,0,0,.05);
+  // border: none;
+  
+  box-shadow: 0 2px 5px rgba(3, 27, 78, 0.05);
+  border: 1px solid #e5eff5;
+
+  .card-header {
+    font-family: "Source Sans Pro";
+    border: none;
+    background: transparent;
+    color: #707786;
+    display: flex;
+    align-items: center;
+
+    .title {
+      font-weight: bold;
+      font-size: 1.15rem;
+    }
+
+    &.navigation {
+      background: rgb(236, 236, 235);
+
+      .nav-tabs .nav-link {
+        @include transition;
+        color: #797979;
+        &.active {
+          background-color: #ffffff !important; 
+          font-weight: bold !important;
+          border-color: transparent transparent transparent !important;
+        }
+
+        &:hover,
+        &:focus {
+          border-color: transparent;
+          background: rgba(0, 0, 0, 0.05);
+        }
+      }
+    }
+  }
+  .card-header+.card-body {
+    padding-top: 0;
+  }
+
+  .card-footer {
+    background-color: rgba(0, 0, 0, 0.02);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+    &.no-bg {
+      background: transparent;
+      border-top: none;
+    }
+  }
+
+  &.card-search-box {
+    
+  }
+}

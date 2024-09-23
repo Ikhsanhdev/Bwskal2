@@ -1,0 +1,102 @@
+
+// Body
+$body-bg: #ffffff;
+
+// Typography
+$font-family: "Source Sans Pro";
+$font-family-sans-serif: "Source Sans Pro", sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.6;
+$border-radius: 6px;
+
+// Warna
+$primary: #2741bc;
+$accent: #ffcc00;
+$secondary: #575f7b;
+$warning: #ffa100;
+$warna-secondary: #575f7b;
+$warna-success: #40dc7e;
+$warna-danger: #ff4c6a;
+$warna-warning: #ffa100;
+$warna-info: #0088ff;
+$warna-instagram: #ef62a8;
+$ungu: #aa4fba;
+$dark: #2c3038;
+$grey-2: #ebebeb;
+
+$utama: #2e4273;
+$sekunder: #d3a534;
+
+$warna-tulisan-dark: #6b6b6b;
+$warna-grey: #767676;
+$warna-lightgrey: #9e9e9e;
+$warna-hitam40: #404040;
+$web-text-color: #333333;
+$web-danger: #E84F56;
+
+$primary-2: #fcc644;
+$primary-3: #202848;
+
+$color-palette: (
+  "p1": #fcc644,
+  "p2": #d3a534,
+  "p3": #FFF76A,
+  "p4": #FFCE89,
+);
+
+$warnanya: (
+  // "p1": #ff7170,
+  // "p2": #ffe57f,
+  "p1": #84ff3d,
+  "p2": #2effd2,
+);
+
+// $gradient-primary: linear-gradient(to right,#00D0D0,#4CDEDE);
+$gradient-primary: linear-gradient(30deg, map-get($color-palette, "p1"), map-get($color-palette, "p2"));
+
+// ADMIN
+$admin-body-bg: #f4f5fa;
+// $admin-body-bg: #f2f9fa;
+$admin-font-family: "Source Sans Pro";
+$admin-font-size-base: 1rem;
+
+// Colors
+$maroon: #AA3B3B;
+
+$hijau-utama: #1abc9c;
+
+//  Web Footer
+$web-footer-top-widget-bg: #1abc9c;
+
+$web-footer-bg: #2A2F34;
+$web-footer-color: #ffffff;
+
+$web-footer-copyright-bg: #FFFFFF;
+$web-footer-copyright-color: #404040;
+
+//  Admin
+$admin-header-height: 70px;
+$admin-sidebar-width: 250px;
+$admin-sidebar-bg: #272447;
+$admin-sidebar-font: $font-family;
+// $admin-header-bg: linear-gradient(20deg, map-get($color-palette, "p1"), map-get($color-palette, "p2"));
+$admin-header-bg: linear-gradient(20deg, $primary, lighten($primary, 10%));
+$admin-sidebar-menu-active-bg: $primary;
+
+//  BS4 Custom Color
+$theme-colors: (
+  "hitam40": $warna-hitam40,
+  "grey": $warna-grey,
+  "grey-2": $grey-2,
+  "lightgrey": $warna-lightgrey,
+  "instagram": $warna-instagram,
+  'primary-2': $primary-2,
+  'primary-3': $primary-3,
+  'ungu': $ungu,
+  'web-danger': $web-danger,
+  'dark2': $web-text-color,
+);
+
+$enable-prefers-reduced-motion-media-query: false;
+$enable-print-styles: false;
+$print-page-size: auto;

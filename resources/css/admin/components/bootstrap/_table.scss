@@ -1,0 +1,133 @@
+.table {
+  color: #44474a;
+  thead th {
+    border-bottom: none;
+    background: #f5f5f5;
+    color: #2b303b;
+  }
+  th,
+  td {
+    padding: 0.75rem 1.25rem;
+    vertical-align: middle;
+  }
+  &.table-fit {
+    tr>*:first-child {
+      padding-left: 2.5rem;
+    } // tr > *:last-child {
+    //   padding-right: 2.5rem;
+    // }
+  }
+  & tbody tr:nth-of-type(odd) {
+    background-color: #fbfbfb;
+  }
+  &.table-hover {
+    tbody {
+      tr {
+        @include transition;
+        &:hover {
+          color: #212529;
+          background-color: #eff0f3;
+        }
+      }
+    }
+  }
+}
+
+.card-table {
+  .searchbar {
+    margin-bottom: 1rem;
+    display: flex;
+
+    .searchbox {
+      @include transition;
+      flex: 1;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      background: rgba(43, 48, 59, 0.05);
+      border-radius: 5px;
+      color: #797c82;
+      padding: 0.5rem .75rem;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 5px 10px rgba(0,0,0,.05);
+      }
+
+      &::placeholder {
+        color: #b1b3b7;
+      }
+    }
+
+    &.with-btn-right {
+      .searchbox {
+        border-radius: 5px 0 0 5px;
+      }
+      .btn {
+        border-radius: 0 5px 5px 0;
+      }
+    }
+  }
+}
+
+.card-table-fit {
+  .table {
+    margin-bottom: 0 !important;
+    
+    &.table-bordered {
+      border-left: none !important;
+      border-right: none !important;
+      border-bottom: none !important;
+
+      tr > *:first-child {
+        border-left: none !important;
+      }
+      tr > *:last-child {
+        border-right: none !important;
+      }
+      tr:last-child > * {
+        border-bottom: none !important;
+      }
+    }
+  }
+  .searchbar {
+    padding: 0 1.25rem;
+  }
+  .dataTables_filter {
+    margin: 0 1rem;
+  }
+}
+.dataTables_info {
+  padding-top: 0 !important;
+}
+
+.dataTables_filter {
+  label {
+    width: 100%;
+    display: flex;
+
+    input {
+      @include transition;
+      flex: 1;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      background: rgba(43, 48, 59, 0.05);
+      border-radius: 5px;
+      color: #797c82;
+      padding: 0.5rem .75rem;
+      margin: 0 !important;
+      font-size: 0.9rem;
+      font-weight: normal !important;
+      line-height: 1;
+      height: auto;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 5px 10px rgba(0,0,0,.05);
+        background: rgba(43, 48, 59, 0.05) !important;
+        border: 1px solid rgba(0, 0, 0, 0.05) !important;
+      }
+
+      &::placeholder {
+        color: #b1b3b7;
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.page-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .page-link {
+    @include transition;
+    border-color: transparent;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #858586;
+    border-radius: 3px;
+    margin: 0 0.15rem;
+    padding: 0.5rem 0.8rem;
+    line-height: 1;
+    font-size: 0.85rem;
+    font-weight: bold;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.15);
+    }
+
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+  &.active {
+    .page-link {
+      color: #fff;
+      background-color: $primary;
+      border-color: $primary;
+    }
+  }
+  &.disabled {
+    .page-link {
+      color: #c5c2c2;
+      pointer-events: none;
+      cursor: auto;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+}
+
+.web-pagination {
+  .page-item {
+    .page-link {
+      @include transition;
+      border-color: transparent;
+      background-color: rgba(0, 0, 0, 0.05);
+      color: #858586;
+      border-radius: 3px;
+      margin: 0 0.15rem;
+      padding: 0.5rem 0.8rem;
+      line-height: 1;
+      font-size: 0.85rem;
+      font-weight: bold;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.15);
+      }
+
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+    &.active {
+      .page-link {
+        color: #fff;
+        background-color: $primary;
+        border-color: $primary;
+      }
+    }
+    &.disabled {
+      .page-link {
+        color: #c5c2c2;
+        pointer-events: none;
+        cursor: auto;
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .web .pagination {
+    li.page-item {
+      display: none;
+    }
+  
+    .page-item:first-child,
+    .page-item:nth-child(2),
+    .page-item:nth-child(3),
+    .page-item:nth-last-child(2),
+    .page-item:nth-last-child(3),
+    .page-item:last-child,
+    .page-item.active,
+    .page-item.disabled {
+      display: flex;
+    }
+  }
+}

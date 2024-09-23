@@ -1,0 +1,46 @@
+{
+  "default_list":[
+    {
+      "text":"Beranda",
+      "data":"@beranda"
+    },
+    {
+      "text":"Berita",
+      "data":"berita"
+    },
+    {
+      "text":"Direktori",
+      "data":"direktori"
+    },
+    {
+      "text":"Galeri Foto",
+      "data":"gallery/image"
+    },
+    {
+      "text":"Galeri Video",
+      "data":"gallery/video"
+    },
+    {
+      "text":"FAQ",
+      "data":"faq"
+    },
+    {
+      "text":"Lokasi Kantor",
+      "data":"lokasi-kantor"
+    },
+    {
+      "text":"Agenda",
+      "data":"agenda"
+    },
+    {
+      "text":"Pengumuman",
+      "data":"pengumuman"
+    },
+    {
+      "text":"Informasi Pegawai",
+      "data":"pegawai"
+    }
+  ],
+  "custom_list": [
+  ]
+}

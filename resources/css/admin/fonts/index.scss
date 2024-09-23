@@ -1,0 +1,23 @@
+$font-folder: '../fonts/';
+
+// @import "circular-std";
+// @import "flaticon";
+// @import "nunito";
+// @import "source-sans-pro";
+// @import "open-sans";
+// @import "poppins";
+// @import "baloo2";
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+.ff-baloo2 {
+    font-family: "Baloo 2";
+}
+
+.ff-open-sans {
+    font-family: "Open Sans";
+}
+
+.ff-source-sans-pro {
+    font-family: 'Source Sans Pro';
+}

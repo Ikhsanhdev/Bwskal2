@@ -1,0 +1,115 @@
+.cv-header {
+  .cv-header-jk {
+    font-size: .7rem;
+    margin-bottom: .25rem;
+  }
+  .cv-header-nama {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+  }
+}
+.cv-header-bawah-list {
+  .cv-header-bawah-item {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    min-width: 50px;
+    & + .cv-header-bawah-item {
+      margin-left: 1rem;
+      padding-left: 1rem;
+      border-left: 1px solid rgba(0,0,0,0.15);
+    }
+    .icon {
+      font-size: 1.25rem;
+      margin-right: 1rem;
+    }
+    .judul {
+      font-size: .75rem;
+      margin-bottom: 0.25rem;
+      font-weight: bold;
+    }
+    .isi {
+    }
+  }
+}
+
+.cv-link-card {
+  overflow: hidden;
+  .list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    .item {
+      & + .item {
+        // margin-top: 1rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+      }
+      a {
+        @include transitionBiasa;
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        padding: 1rem;
+        color: $warna-grey;
+        .icon {
+          font-size: 1.25rem;
+          padding-right: 1rem;
+          // padding-top: .5rem;
+        }
+        .item-text {
+          width: 85%;
+          flex: 1;
+        }
+
+        .link {
+          font-size: .75rem;
+          color: #757575;
+          line-height: 1.25;
+        }
+      }
+      &:nth-child(2n) a {
+        background: #fbfbfb;
+      }
+      &:hover a {
+        background: #f3f1f1;
+      }
+    }
+  }
+}
+.cv-card-section {
+  .title {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #616569;
+  }
+  .list {
+    .item {
+      display: flex;
+      .icon {
+        margin-right: 1rem;
+        // color: $warna-primary;
+      }
+      .isi {
+        font-weight: bold;
+        // color: $warna-primary;
+      }
+      .tahun {
+        font-weight: bold;
+        flex-shrink: 0;
+      }
+      & + .item {
+        // border-top: 1px solid rgba(0, 0, 0, 0.05);
+        margin-top: 0.25rem;
+      }
+    }
+  }
+
+  & + .cv-card-section {
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+}

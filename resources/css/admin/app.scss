@@ -1,0 +1,398 @@
+@import "functions";
+@import "fonts/index.scss";
+@import "variables";
+@import "mixin/index.scss";
+@import "utils/index.scss";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap.scss";
+
+@import "components/index.scss";
+@import "../shared/components/ckeditor";
+@import "../shared/medsos";
+@import "../shared/fonts/flaticon";
+
+[v-cloak] {
+    display: none;
+}
+
+.glightbox-button-hidden {
+    display: none !important;
+}
+
+.note-btn {
+    font-weight: normal !important;
+}
+
+body {
+    background: $body-bg;
+    font-family: $font-family;
+    font-size: $font-size-base;
+}
+body.admin {
+    background: $admin-body-bg;
+    font-family: $admin-font-family;
+    font-size: $admin-font-size-base;
+}
+body.web {
+    font-family: "Poppins";
+}
+a:hover {
+    text-decoration: none;
+}
+
+#app.admin {
+    color: #76838f;
+}
+
+// .web {
+//   @include media-breakpoint-up(lg) {
+//     .container-fluid {
+//       padding-left: 5rem;
+//       padding-right: 5rem;
+//     }
+//   }
+// }
+.pagination {
+    .page-item.disabled {
+        pointer-events: none;
+    }
+}
+.app-branding {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    height: 100%;
+    &:hover {
+        text-decoration: none;
+    }
+
+    .logo-text {
+        margin-left: 1rem;
+        color: #fdfdfd;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        line-height: 1;
+
+        .atas {
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        .bawah {
+            color: #727272;
+            margin-top: 0.5rem;
+        }
+    }
+
+    &.dark {
+        color: #34395e;
+
+        .logo-text {
+            color: #575663;
+
+            .bawah {
+                color: #727272;
+            }
+        }
+    }
+
+    &.on-dark {
+        color: #ffffff;
+
+        .logo-text {
+            color: #ffffff !important;
+            .bawah {
+                color: #ffffff !important;
+            }
+        }
+
+        .text-judul {
+            background: #5eb359;
+            background-image: $gradient-primary;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.25rem;
+            font-weight: 800;
+            font-family: "Baloo 2";
+        }
+    }
+}
+
+.text-gradient {
+    background: #5eb359;
+    background-image: $gradient-primary;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.25rem;
+    font-weight: 800;
+    font-family: "Baloo 2";
+}
+
+.text-gradient-only {
+    background: #5eb359;
+    background-image: $gradient-primary;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card.card-login {
+    border-bottom: 8px solid $primary;
+    overflow: hidden;
+    border-radius: 8px;
+    .card-header {
+        background: #d1b4a0;
+        padding: 1rem 0;
+    }
+}
+
+.admin {
+    .form-control {
+        font-size: 0.9rem;
+    }
+}
+
+.alert.alert-warning {
+    color: #7b5f3d;
+    background-color: #fff8d3;
+    border-color: #ecd185;
+}
+.border-dashed {
+    border-style: dashed;
+}
+
+.link-menuitem {
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+    background: rgba(0, 0, 0, 0.025);
+    border: 1px solid rgb(0 0 0 / 5%);
+
+    .handle:hover {
+        cursor: move;
+    }
+    .atas {
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        // background: #777f92;
+        // color: #ffffff;
+        .content {
+            min-width: 0;
+        }
+        .teks {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: bold;
+            line-height: 1.25;
+        }
+        .subteks {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 0.75rem;
+            margin-top: 0.5rem;
+        }
+        .aksi {
+            flex-shrink: 0;
+            min-width: max-content;
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+.tippy-poppeta {
+    .judul {
+        font-weight: 800;
+        font-size: 1.15rem;
+        color: $dark;
+    }
+    .subjudul {
+        font-size: 0.8rem;
+        color: $secondary;
+    }
+    .listnya {
+        background: rgba(0, 0, 0, 0.05);
+        margin: 0 -9px;
+        margin-top: 0.5rem;
+    }
+
+    .itemnya {
+        display: flex;
+        padding: 0.5rem;
+        font-size: 0.75rem;
+        align-items: center;
+
+        &:nth-child(2n) {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .kata {
+            flex: 1;
+            padding-right: 2rem;
+        }
+        .angka {
+            background: $primary;
+            color: white;
+            padding: 0.1rem 0.5rem;
+            border-radius: 6px;
+        }
+    }
+}
+
+.beranda-widget-item {
+    box-shadow: 0 5px 10px rgb(0 0 0 / 5%);
+    background: #fff;
+    margin-top: 1.5rem;
+    position: relative;
+    padding: 1rem;
+    border-radius: 6px;
+
+    .kata {
+        font-weight: bold;
+        font-family: "Baloo 2";
+        font-size: 1.15rem;
+    }
+
+    .angka {
+        text-align: right;
+    }
+}
+
+.beranda-stat-app {
+    .stat-header {
+        text-align: center;
+        .judul {
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        .total {
+            font-size: 1rem;
+        }
+        .waktu,
+        .terdata {
+            display: inline-block;
+            background: $primary;
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 0.5rem 0.75rem;
+            margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.8rem;
+        }
+
+        .terdata {
+            margin-bottom: 0;
+            background: #525252;
+        }
+    }
+    .wrapnya {
+        margin-bottom: 5rem;
+    }
+
+    .chart-list {
+        margin-top: 3rem;
+    }
+
+    .chart-card {
+        background: #ffffff;
+        box-shadow: 0 5px 10px rgb(0 0 0 / 5%);
+        border-radius: 8px;
+        margin-top: 1rem;
+        padding: 1rem;
+    }
+
+    .card {
+        overflow: hidden;
+        .card-header {
+            background: rgba(0, 0, 0, 0.025);
+            font-size: 1.5rem;
+            font-family: "Baloo 2";
+        }
+        .card-body {
+            padding: 1rem;
+        }
+    }
+}
+
+.kec-card-info {
+    font-family: "Nunito";
+    margin: 1rem -1rem -1rem;
+    padding: 1rem;
+    background: #f7f7f7;
+
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1rem;
+    }
+}
+
+.bg-fancy-1 {
+    background: url(../images/login-bg.svg) right bottom no-repeat;
+}
+.bg-dot {
+    position: relative;
+    background: url(../images/bg-dot.png) no-repeat;
+    background-position: left calc(50vw - 483px) bottom -10vh;
+}
+.bg-ornament-1 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url(../images/login-ornament.svg) no-repeat;
+    background-size: contain;
+    background-position: right bottom;
+    width: 100%;
+    height: 100%;
+    opacity: 0.75;
+}
+
+.box-dashed {
+    background: rgb(0 0 0 / 5%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px dashed rgb(0 0 0 / 10%);
+}
+
+.tahun-badge {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+    background: rgb(56 248 126 / 25%);
+    color: rgb(2, 199, 120);
+    display: inline-block;
+    padding: 0.2rem 0.75rem;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.shadow-sm {
+    box-shadow: 0 2px 5px rgba(3, 27, 78, 0.05);
+}
+.border-sm {
+    border: 1px solid #e5eff5;
+}
+
+.center-message-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+        font-weight: 800;
+        font-size: 1.25rem;
+        color: $dark;
+        text-align: center;
+    }
+    
+    .message {
+        font-size: 0.8rem;
+        color: $secondary;
+        text-align: center;
+    }
+}

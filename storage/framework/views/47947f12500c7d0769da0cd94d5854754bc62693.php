@@ -1,0 +1,1 @@
+<?php /**PATH /var/www/sda/balai/bwskalimantan2/resources/views/layouts/web/favicon.blade.php ENDPATH**/ ?>

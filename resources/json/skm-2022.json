@@ -1,0 +1,194 @@
+{
+  "keterangan": "SKM 2022",
+  "pertanyaan": [
+    {
+      "soal": "Bagaimana pendapat Saudara tentang kesesuaian persyaratan pelayanan dengan jenis pelayanannya",
+      "opsi": {
+        "a": {
+          "text": "Tidak sesuai",
+          "value": 1
+        },
+        "b": {
+          "text": "Kurang sesuai",
+          "value": 2
+        },
+        "c": {
+          "text": "Sesuai",
+          "value": 3
+        },
+        "d": {
+          "text": "Sangat sesuai",
+          "value": 4
+        }
+      }
+    },
+    {
+      "soal": "Bagaimana pemahaman Saudara tentang kemudahan prosedur pelayanan di unit ini",
+      "opsi": {
+        "a": {
+          "text": "Tidak mudah",
+          "value": 1
+        },
+        "b": {
+          "text": "Kurang mudah",
+          "value": 2
+        },
+        "c": {
+          "text": "Mudah",
+          "value": 3
+        },
+        "d": {
+          "text": "Sangat mudah",
+          "value": 4
+        }
+      }
+    },
+    {
+      "soal": "Bagaimana pendapat Saudara tentang kecepatan waktu dalam memberikan pelayanan",
+      "opsi": {
+        "a": {
+          "text": "Tidak cepat",
+          "value": 1
+        },
+        "b": {
+          "text": "Kurang cepat",
+          "value": 2
+        },
+        "c": {
+          "text": "Cepat",
+          "value": 3
+        },
+        "d": {
+          "text": "Sangat cepat",
+          "value": 4
+        }
+      }
+    },
+    {
+      "soal": "Bagaimana pendapat Saudara tentang kewajaran biaya/tarif dalam pelayanan",
+      "opsi": {
+        "a": {
+          "text": "Sangat mahal",
+          "value": 1
+        },
+        "b": {
+          "text": "Cukup mahal",
+          "value": 2
+        },
+        "c": {
+          "text": "Murah",
+          "value": 3
+        },
+        "d": {
+          "text": "Gratis",
+          "value": 4
+        }
+      }
+    },
+    {
+      "soal": "Bagaimana pendapat Saudara tentang kesesuaian produk pelayanan antara yang tercantum dalam standar pelayanan dengan hasil yang diberikan",
+      "opsi": {
+        "a": {
+          "text": "Tidak sesuai",
+          "value": 1
+        },
+        "b": {
+          "text": "Kurang sesuai",
+          "value": 2
+        },
+        "c": {
+          "text": "Sesuai",
+          "value": 3
+        },
+        "d": {
+          "text": "Sangat sesuai",
+          "value": 4
+        }
+      }
+    },
+    {
+      "soal": "Bagaimana pendapat Saudara tentang kompetensi/kemampuan petugas dalam pelayanan",
+      "opsi": {
+        "a": {
+          "text": "Tidak kompeten",
+          "value": 1
+        },
+        "b": {
+          "text": "Kurang kompeten",
+          "value": 2
+        },
+        "c": {
+          "text": "Kompeten",
+          "value": 3
+        },
+        "d": {
+          "text": "Sangat kompeten",
+          "value": 4
+        }
+      }
+    },
+    {
+      "soal": "Bagamana pendapat saudara perilaku petugas dalam pelayanan terkait kesopanan dan keramahan",
+      "opsi": {
+        "a": {
+          "text": "Tidak sopan dan ramah",
+          "value": 1
+        },
+        "b": {
+          "text": "Kurang sopan dan ramah",
+          "value": 2
+        },
+        "c": {
+          "text": "Sopan dan ramah",
+          "value": 3
+        },
+        "d": {
+          "text": "Sangat sopan dan ramah",
+          "value": 4
+        }
+      }
+    },
+    {
+      "soal": "Bagaimana pendapat Saudara tentang kualitas sarana dan prasarana",
+      "opsi": {
+        "a": {
+          "text": "Buruk",
+          "value": 1
+        },
+        "b": {
+          "text": "Cukup",
+          "value": 2
+        },
+        "c": {
+          "text": "Baik",
+          "value": 3
+        },
+        "d": {
+          "text": "Sangat Baik",
+          "value": 4
+        }
+      }
+    },
+    {
+      "soal": "Bagaimana pendapat Saudara tentang penanganan pengaduan pengguna layanan",
+      "opsi": {
+        "a": {
+          "text": "Tidak ada",
+          "value": 1
+        },
+        "b": {
+          "text": "Ada tetapi tidak berfungsi",
+          "value": 2
+        },
+        "c": {
+          "text": "Berfungsi kurang maksimal",
+          "value": 3
+        },
+        "d": {
+          "text": "Dikelola dengan baik",
+          "value": 4
+        }
+      }
+    }
+  ]
+}

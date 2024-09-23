@@ -1,0 +1,322 @@
+.hp-section {
+    .ts {
+        text-shadow: 0px 1px 28px rgb(255 255 255 / 20%), 0px 4px 25px rgb(0 0 0 / 50%);
+    }
+    #modalHasil {
+        background: rgba(0, 0, 0, 0.75);
+    }
+    .hp-atas {
+        margin-bottom: 2rem;
+    }
+    .hp-tps-card {
+        flex: 1;
+        margin-bottom: 1.5rem;
+        background: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+
+            .judul {
+                font-weight: 800;
+                font-size: 1.25rem;
+            }
+
+            .badge {
+                padding: 0.5rem 0.75rem;
+            }
+        }
+        .content {
+            flex: 1;
+            background: rgba($color: #000000, $alpha: 0.025);
+            padding: 1rem;
+        }
+        .lw {
+            max-width: 85%;
+        }
+
+        .hp-stat {
+            display: flex;
+            .item {
+                flex: 1;
+                text-align: center;
+                padding: 1rem 0.5rem;
+                .angka {
+                    font-size: 2.5rem;
+                    font-weight: 800;
+                }
+                .kata {
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .hasil-wrap {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+        background: rgba(0, 0, 0, 0.75);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease-out;
+        display: flex;
+        flex-direction: column;
+
+        &.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+
+    .hitung-mundur {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-weight: 800;
+        font-size: 17rem;
+        font-family: "Source Sans Pro", sans-serif;
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .angka {
+            position: absolute;
+            opacity: 0;
+            text-align: center;
+            color: #ffffff;
+            text-shadow: -1px -1px 50px rgba(0, 0, 0, 0.35), 3px 3px 50px rgba(0, 0, 0, 0.35),
+                6px 6px 50px rgba(0, 0, 0, 0.05);
+        }
+    }
+
+    .terpilih-wrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3rem;
+        font-family: "Source Sans Pro";
+
+        .header {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 2.5rem;
+            line-height: 1;
+        }
+        .kandidat-terpilih {
+            text-align: center;
+            color: #ffffff;
+            line-height: 1;
+            .foto {
+                margin-bottom: 3rem;
+            }
+            .nama {
+                font-size: 3rem;
+                font-weight: 800;
+                margin-bottom: 0.5rem;
+            }
+            .nomor {
+                font-size: 2rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    #hg-wrap {
+        position: absolute;
+        width: 100%;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        font-family: "Source Sans Pro";
+        align-self: center;
+        left: auto;
+        right: auto;
+        max-width: 90vw;
+
+        // @media (min-width: 1025px) {
+        //     max-width: 80vw;
+        // }
+
+        .header {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .hg-perolehan-item {
+            position: relative;
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            width: 100%;
+            .no-urut {
+                position: absolute;
+                bottom: 0;
+                background: salmon;
+                color: white;
+            }
+        }
+
+        .ps-responsive-item {
+            display: flex;
+            flex-direction: column;
+
+            &.sedikit {
+                .foto {
+                    max-width: 300px;
+                }
+                .no {
+                    font-size: 1.25rem;
+                }
+                .nama {
+                    font-size: 1.5rem;
+                }
+                .info-suara {
+                    flex-direction: row;
+                    .kata {
+                        font-size: 1.5rem;
+                        margin-top: 0;
+                        margin-left: 1rem;
+                    }
+                }
+            }
+            &.banyak {
+                .foto {
+                    max-width: 200px;
+                }
+                .no {
+                    font-size: 1rem;
+                    @media (min-width: 1025px) {
+                        font-size: 1.25rem;
+                    }
+                }
+                .nama {
+                    font-size: 1.25rem;
+                    @media (min-width: 1025px) {
+                        font-size: 1.5rem;
+                    }
+                }
+                .info-suara {
+                    flex-direction: column;
+                    .kata {
+                        font-size: 1rem;
+                        margin-top: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    //  Hide dulu
+    #tw-atas,
+    #tw-periode,
+    #kt-foto,
+    #kt-nama,
+    #kt-nomor,
+    #kt-btn {
+        opacity: 0;
+    }
+}
+
+.cetak-hp {
+    .header {
+        .atas {
+            font-size: 18pt;
+        }
+        .periode {
+            font-size: 20pt;
+        }
+        .ket {
+            margin-top: 0.75rem;
+            font-size: 10pt;
+        }
+    }
+
+    .hg-perolehan-item {
+        line-height: 1;
+        position: relative;
+        background: white;
+        border-radius: 8px;
+        padding: 1rem;
+        width: 100%;
+    }
+    
+    .kandidat-list {
+        display: flex;
+        margin-top: 2rem;
+        
+        .kandidat-item {
+            display: flex;
+            flex-direction: column;
+    
+            &.sedikit {
+                .foto {
+                    max-width: 180px;
+                }
+                .no {
+                    font-size: 12pt;
+                    font-weight: 600;
+                }
+                .nama {
+                    margin-top: .25rem;
+                    font-size: 14pt;
+                    font-weight: 700;
+                }
+                .info-suara {
+                    padding: .75rem 1rem;
+                    flex-direction: row;
+                    .angka {
+                        font-size: 16pt;
+                    }
+                    .kata {
+                        font-size: 12pt;
+                        margin-left: .5rem;
+                    }
+                }
+            }
+            &.banyak {
+                .foto {
+                    max-width: 150px;
+                }
+                .no {
+                    font-size: 12pt;
+                    font-weight: 600;
+                }
+                .nama {
+                    margin-top: .25rem;
+                    font-size: 14pt;
+                    font-weight: 700;
+                }
+                .info-suara {
+                    flex-direction: column;
+                    text-align: center;
+                    padding: .5rem 1rem;
+
+                    .angka {
+                        font-size: 16pt;
+                    }
+                    .kata {
+                        font-size: 12pt;
+                        margin-top: 0.25rem;
+                    }
+                }
+            }
+        }
+    }
+}

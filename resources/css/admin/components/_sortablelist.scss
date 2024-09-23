@@ -1,0 +1,52 @@
+.aklist-item {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: rgba(0, 0, 0, 0.05);
+
+  .handle:hover {
+    cursor: move;
+  }
+  .atas {
+    position: relative;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    background: $maroon;
+    color: #ffffff;
+    .teks {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: bold;
+    }
+    .aksi {
+      min-width: max-content;
+      margin-left: .5rem;
+    }
+  }
+
+
+  .aklist-item {
+    margin: .75rem 1rem;
+    .atas {
+      background: rgba(0, 0, 0, 0.025);
+    }
+  }
+
+  &.dropdown > .atas {
+    background: #777f92;
+    color: #ffffff;
+    .subteks {
+      font-size: .65rem;
+      color: rgba(255, 255, 255, 0.75);
+    }
+  }
+
+  & > .subitem-wrap .subitem-wrap .subitem-wrap &:not(.dropdown) > .atas {
+    background: rgb(231, 231, 231);
+  }
+}

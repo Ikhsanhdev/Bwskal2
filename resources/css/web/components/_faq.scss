@@ -1,0 +1,41 @@
+.faq-list {
+}
+
+.faq-item {
+  .faq-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f7f7f7;
+    color: $secondary;
+    position: relative;
+    padding: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .25s ease-out;
+    border-radius: 8px;
+
+    &:hover {
+      background: darken($color: #f7f7f7, $amount: 5%);
+    }
+
+    &::after {
+      content: "\F0143";
+      font-family: "Material Design Icons";
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    &[aria-expanded="true"] {
+      color: #ffffff;
+      background: $primary;
+      &::after {
+        content: "\F0140";
+      }
+    }
+  }
+
+  & + & {
+    margin-top: 1rem;
+  }
+}

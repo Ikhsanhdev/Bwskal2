@@ -1,0 +1,33 @@
+.kategori-app {
+  .kategori-item-container {
+    background: #f9f9f9;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .kategori-item {
+    padding: .5rem 1rem;
+    background: #ff7b4e;
+    font-size: 1.15rem;
+    color: #fffaf4;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+
+  .subkategori-item {
+    background: rgba(0, 0, 0, 0.07);
+    margin: .75rem 1rem;
+    padding: 0.5rem 1rem;
+    padding-left: .75rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    
+    .text {
+      font-weight: bold;
+    }
+  }
+
+}
