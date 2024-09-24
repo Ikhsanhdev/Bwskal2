@@ -8,7 +8,9 @@
 @yield('jsBeforeMain')
 <script src="{{ url('libs/aklibs/aklibs.min.js') }}"></script>
 <!-- <script src="{{ mix('assets/js/app.js') }}"></script> -->
-<script src="{{ asset('assets/js/app.js') }}"></script>
+<!-- <script src="{{ asset('assets/js/app.js') }}"></script> -->
+<script src="{{ url('http://103.59.95.237/assets/js/app.js') }}"></script>
+
 
 @yield('jsAfterMain')
 @yield('jsAfter')
