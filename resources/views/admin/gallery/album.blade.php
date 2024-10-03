@@ -188,9 +188,6 @@ Galeri
         },
       },
       methods: {
-        // selected_cover(item) {
-        //   return item.id == @json($album->album_cover->id);
-        // },
         selected_cover(item) {
           return item.id == <?php echo json_encode(optional($album->album_cover)->id, 15, 512); ?>;
         },
