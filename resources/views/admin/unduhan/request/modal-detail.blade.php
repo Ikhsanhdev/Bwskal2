@@ -34,7 +34,7 @@ $formAction = route('admin.unduhan.request.verify');
 @section('body')
   <div class="fw-700 fz-1-15rem mb-2">Unduhan tujuan</div>
   <div class="bg-light lh-1-15 rounded-sm d-flex flex justify-content-center align-items-center flex-column py-3">
-    <i class="fi {!! flaticon_from_mime($unduhan->mime) !!} fz-4rem"></i>
+    <i class="fi <?php echo flaticon_from_mime(optional($unduhan)->mime); ?> fz-4rem"></i>
     <div class="fw-800 fz-1-25rem mb-1">{{ $unduhan->title }}</div>
     <div class="fz-0-85rem text-muted">Diunduh {{ $unduhan->hit }} kali</div>
   </div>
